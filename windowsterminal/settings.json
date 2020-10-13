@@ -66,7 +66,7 @@
                 "source": "Windows.Terminal.Azure"
             },
             {
-                "commandline" : "ssh fando@dev1",
+                "commandline" : "ssh fangod@dev1",
                 "guid" : "{84aa403c-9fcc-4554-8bad-3cff4b50d524}",
                 "historySize" : 9001,
                 "name" : "dev1",
