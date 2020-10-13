@@ -1,0 +1,25 @@
+A File Icon
+All Autocomplete
+Anaconda
+AutoFileName
+AutoPEP8
+Boxy Theme
+BracketHighlighter
+ColorPicker
+Compare Side-By-Side
+ConvertToUTF8
+DocBlocker
+Emmet
+IMESupport
+Nil-Theme
+Package Control
+PyV8
+Search Stack Overflow
+SFTP
+SideBarEnhancements
+SideBarTools
+SublimeCodeInter
+SublimeREPL
+Theme - Soda
+ZZZ
+zzz A File Icon zzz
