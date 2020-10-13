@@ -1,0 +1,15 @@
+<snippet>
+	<content><![CDATA[
+# coding: utf-8
+"""
+User Name: fangod@cn$TM_FULLNAME
+Date Time: ${1:alt+d}
+File Name: $TM_FILENAME @v1.0
+"""
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>liancode</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	# <scope>source.python</scope>
+</snippet>
