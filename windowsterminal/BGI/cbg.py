@@ -42,11 +42,11 @@ class bcolors:
 def main(keyword=None):
     if platform.platform().startswith("Windows"):
         select_terminal = 1
-        bg_imgs = [os.path.join("d:/BGI/", i) for i in os.listdir("d:/BGI/") if i.endswith(".jpg")]
+        bg_imgs = [os.path.join("d:/BGI/", i) for i in os.listdir("d:/BGI/") if i.endswith(".jpg") or i.endswith(".png")]
         settings_path = "c:/Users/fangod/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json"
     elif platform.platform().startswith("Linux"):
         select_terminal = 0
-        bg_imgs = [os.path.join("d:/BGI/", i) for i in os.listdir("/mnt/d/BGI/") if i.endswith(".jpg")]
+        bg_imgs = [os.path.join("d:/BGI/", i) for i in os.listdir("/mnt/d/BGI/") if i.endswith(".jpg") or i.endswith(".png")]
         settings_path = "/mnt/c/Users/fangod/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json"
 
     with open(settings_path) as jf:
