@@ -112,12 +112,6 @@ def change_unit(unit, keyword, bg_imgs):
     if "backgroundImage" not in unit:
         unit["backgroundImage"] = bg_imgs[0]
 
-    try:
-        xid = (bg_imgs.index(unit["backgroundImage"]) + 1) % len(bg_imgs)
-        unit["backgroundImage"] = bg_imgs[xid]
-    except:
-        del unit["backgroundImage"]
-
     if keyword in config_list:
         print(bcolors.RED + "\nOpen comments when need change config. Maybe it's not safe." + bcolors.BOLD)
         # if value.isdigit():
@@ -126,17 +120,22 @@ def change_unit(unit, keyword, bg_imgs):
     else:
         if keyword in ["up", "u", "A", "a"]:
             unit["backgroundImageOpacity"] += float(value)
-
-        if keyword in ["down", "d", "do", "B", "b"]:
+        elif keyword in ["down", "d", "do", "B", "b"]:
             unit["backgroundImageOpacity"] -= float(value)
+        elif keyword in ["None", "none", "n", "N", "no", "No", "NONE"]:
+            del unit["backgroundImage"]
+        else:
+            try:
+                xid = (bg_imgs.index(unit["backgroundImage"]) + 1) % len(bg_imgs)
+                unit["backgroundImage"] = bg_imgs[xid]
+            except:
+                del unit["backgroundImage"]
 
         if unit["backgroundImageOpacity"] > 1:
             unit["backgroundImageOpacity"] = 1
         if unit["backgroundImageOpacity"] < 0:
             unit["backgroundImageOpacity"] = 0
 
-        if keyword in ["None", "none", "n", "N"]:
-            del unit["backgroundImage"]
     print(bcolors.OKGREEN + "Change: " + unit["name"] + bcolors.ENDC)
     return unit
 
